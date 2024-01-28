@@ -8,7 +8,7 @@ const Login = ({ hrefLink }: HrefProps) => {
     const navigate = useNavigate();
     const { state } = useLocation();
 
-    const [username, setUsername] = useState<string>('srgaerg');
+    const [username, setUsername] = useState<string>('');
     const [password, setPassword] = useState<string>('');
 
     const [usernamePasswordError, setUsernamePasswordError] = useState<Boolean>(false);
@@ -51,12 +51,12 @@ const Login = ({ hrefLink }: HrefProps) => {
 
     useEffect(() => {
         if (cookieReceived === true) {
-            navigate('/restapipage', { state: cookieReceived, replace: true });
+            navigate('/sschmi129info', { state: cookieReceived, replace: true });
         }
     }, [cookieReceived]);
 
     return (
-        <>
+        <div className='flex'>
             <form
                 className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 mt-10 h-fit"
                 onSubmit={
@@ -144,7 +144,7 @@ const Login = ({ hrefLink }: HrefProps) => {
 
             </form>
 
-        </>
+        </div>
     )
 };
 

@@ -13,12 +13,12 @@ const hrefLink: string = 'https://sschmi129raspi.duckdns.org';
 
 function App() {
   return (
-    <div className="App flex sm:h-screen sm:w-screen">
+    <div className="App flex justify-center sm:h-screen sm:w-screen">
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Login hrefLink={hrefLink}/>} />
           <Route path="/register" element={<Register hrefLink={hrefLink}/>} />
-          <Route path="/restapipage" element={<RestApiPage hrefLink={hrefLink}/>} />
+          <Route path="/sschmi129info" element={<RestApiPage hrefLink={hrefLink}/>} />
         </Routes>
       </BrowserRouter>
     </div>
